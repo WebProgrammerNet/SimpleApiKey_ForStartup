@@ -1,0 +1,35 @@
+Cross Cutting Concerns
+things we need applied for all(or some) actions
+Examples
+
+Authentication
+Authorization
+Logging
+General Error Handling
+We have a video on adding a MessageHandler to implement an Api Key check 
+Action Filter Attribute
+perform your authentication check
+
+In your controller class decorate the class with the Authentication class name you created to  perform the authentication.
+If the class is Autherization Filter the decoration might look like this:
+
+Cross Cutting Concerns 
+Something we want to apply in all cases
+for Example
+We want all request to go through security
+we want to log all requests
+
+Filters and Message Handlers
+Two ways to handle cross cutting concerns
+ 
+Use MessageHandlers when you want to apply the action to all HTTP
+requests(sounds good for security)
+
+Use Filters when you want to apply the action
+only to requests thatare dispatched to the controller or action where the filter is applied
+
+a Message Handler is a class that receives an HTTP requests and reurns an HTTP response
+
+Tyupically, a series of message handlers are chained together.The first handlerr receives an HTTP request, does some processing, and gives the request to the next handler. At some point, the response is created  and goes back 
+up the chain. This pattern is called a delegting handler.
+Hardware
